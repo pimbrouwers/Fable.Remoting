@@ -3,11 +3,15 @@ source https://api.nuget.org/v3/index.json
 
 storage: none
 lowest_matching: true
+nuget Azure.Core
 nuget benchmarkdotnet
 nuget Expecto
 nuget FSharp.Core >= 4.7.2
 nuget Microsoft.AspNetCore.Server.Kestrel ~> 2.2
 nuget Microsoft.AspNetCore.TestHost ~> 3.1
+nuget Microsoft.Azure.Functions.Worker.Extensions.Http
+nuget Microsoft.Extensions.Configuration.Json
+nuget Microsoft.Extensions.Logging.Abstractions
 nuget Microsoft.IO.RecyclableMemoryStream ~> 2
 nuget Newtonsoft.Json
 nuget NUnit
@@ -29,7 +33,7 @@ group Build
     nuget Falco >= 3.1.8
 
 group FunctionsWorker
-    source https://snapi.nuget.org/v3/index.json
+    source https://api.nuget.org/v3/index.json
     framework: net5
     storage: none
     lowest_matching: true
