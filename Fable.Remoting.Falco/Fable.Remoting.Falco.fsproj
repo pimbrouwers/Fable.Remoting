@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Description>Falco-Fable adapter that generates routes for shared server spec with a Fable client. Client must use Fable.Remoting.Client</Description>
+        <PackageProjectUrl>https://github.com/Zaid-Ajaj/Fable.Remoting</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Zaid-Ajaj/Fable.Remoting.git</RepositoryUrl>
+        <PackageLicenseUrl>https://github.com/Zaid-Ajaj/Fable.Remoting/blob/master/LICENSE</PackageLicenseUrl>
+        <PackageIconUrl></PackageIconUrl>
+        <PackageTags>fsharp;fable;remoting;rpc;webserver;falco</PackageTags>
+        <Authors>Pim Brouwers;Zaid Ajaj;Diego Esmerio</Authors>
+        <Version>4.22.0</Version>
+        <TargetFrameworks>netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="SharedReader.fs" />
+        <Compile Include="FableFalcoAdapter.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Fable.Remoting.Server\Fable.Remoting.Server.fsproj" />
+    </ItemGroup>
+
+    <Import Project="..\.paket\Paket.Restore.targets" />
+</Project>

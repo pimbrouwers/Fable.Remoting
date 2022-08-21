@@ -14,6 +14,7 @@ nuget NUnit
 nuget PuppeteerSharp
 nuget Suave
 nuget Giraffe
+nuget Falco
 
 group Build
     source https://api.nuget.org/v3/index.json
@@ -25,9 +26,10 @@ group Build
     nuget Fake.Core.Target
     nuget Fake.DotNet.Cli
     nuget Fake.IO.FileSystem
+    nuget Falco >= 3.1.8
 
 group FunctionsWorker
-    source https://api.nuget.org/v3/index.json
+    source https://snapi.nuget.org/v3/index.json
     framework: net5
     storage: none
     lowest_matching: true
@@ -42,6 +44,7 @@ group LatestNet5
     framework: net5
     storage: none
     lowest_matching: true
+    nuget Falco >= 3.0.0
     nuget Giraffe >= 5.0.0
     nuget FSharp.Core >= 5.0
     nuget Microsoft.IO.RecyclableMemoryStream ~> 2
